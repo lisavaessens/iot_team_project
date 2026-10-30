@@ -1,0 +1,6 @@
+CIRCUITPY_WIFI_SSID = "Test"
+CIRCUITPY_WIFI_PASSWORD = "testwifi"
+MQTT_BROKER = "172.20.10.13"
+MQTT_PORT = 1883
+MQTT_USER = "plantpal"
+MQTT_PASS = "ikhebdorst"
