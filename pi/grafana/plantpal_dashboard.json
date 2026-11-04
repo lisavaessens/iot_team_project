@@ -6,7 +6,7 @@
   ],
   "timezone": "browser",
   "schemaVersion": 39,
-  "version": 1,
+  "version": 2,
   "editable": true,
   "refresh": "10s",
   "time": {
@@ -322,6 +322,22 @@
       }
     },
     {
+      "id": 13,
+      "type": "text",
+      "title": "Water geven",
+      "description": "Stuurt plantpal/cmd/water naar de Pico (via water_knop.py op de Pi, poort 8080). Werkt de knop niet? Kies bovenaan bij 'Pi-adres' het IP van de Pi.",
+      "gridPos": {
+        "x": 0,
+        "y": 6,
+        "w": 24,
+        "h": 5
+      },
+      "options": {
+        "mode": "html",
+        "content": "<div style='text-align:center'><a href=\"http://${pi}:8080/water?seconden=2\" target=\"_blank\" style=\"display:inline-block;padding:10px 18px;margin:4px;border-radius:6px;background:#1f60c4;color:#fff;text-decoration:none;font-size:16px\">2 seconden water</a> &nbsp; <a href=\"http://${pi}:8080/water?seconden=3\" target=\"_blank\" style=\"display:inline-block;padding:10px 18px;margin:4px;border-radius:6px;background:#1f60c4;color:#fff;text-decoration:none;font-size:16px\">3 seconden water</a> &nbsp; <a href=\"http://${pi}:8080/water?seconden=5\" target=\"_blank\" style=\"display:inline-block;padding:10px 18px;margin:4px;border-radius:6px;background:#1f60c4;color:#fff;text-decoration:none;font-size:16px\">5 seconden water</a><p style='margin-top:8px;opacity:.7'>Opent een nieuw tabblad. Onder 10 % waterpeil weigert de Pico te pompen.</p></div>"
+      }
+    },
+    {
       "id": 6,
       "title": "Bodemvocht en droogtedrempel",
       "description": "Zakt bodemvocht onder de drempel (potmeter), dan heeft de plant dorst.",
@@ -332,7 +348,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 6,
+        "y": 11,
         "w": 12,
         "h": 8
       },
@@ -379,7 +395,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 6,
+        "y": 11,
         "w": 12,
         "h": 8
       },
@@ -426,7 +442,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 14,
+        "y": 19,
         "w": 8,
         "h": 8
       },
@@ -473,7 +489,7 @@
       },
       "gridPos": {
         "x": 8,
-        "y": 14,
+        "y": 19,
         "w": 8,
         "h": 8
       },
@@ -520,7 +536,7 @@
       },
       "gridPos": {
         "x": 16,
-        "y": 14,
+        "y": 19,
         "w": 8,
         "h": 8
       },
@@ -567,7 +583,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 22,
+        "y": 27,
         "w": 12,
         "h": 8
       },
@@ -614,7 +630,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 22,
+        "y": 27,
         "w": 12,
         "h": 8
       },
@@ -650,5 +666,40 @@
         }
       }
     }
-  ]
+  ],
+  "templating": {
+    "list": [
+      {
+        "type": "custom",
+        "name": "pi",
+        "label": "Pi-adres",
+        "query": "rpilv.local,172.20.10.13,192.168.0.143",
+        "current": {
+          "selected": true,
+          "text": "rpilv.local",
+          "value": "rpilv.local"
+        },
+        "options": [
+          {
+            "selected": true,
+            "text": "rpilv.local",
+            "value": "rpilv.local"
+          },
+          {
+            "selected": false,
+            "text": "172.20.10.13",
+            "value": "172.20.10.13"
+          },
+          {
+            "selected": false,
+            "text": "192.168.0.143",
+            "value": "192.168.0.143"
+          }
+        ],
+        "hide": 0,
+        "includeAll": false,
+        "multi": false
+      }
+    ]
+  }
 }
