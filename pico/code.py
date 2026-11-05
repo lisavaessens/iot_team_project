@@ -59,7 +59,7 @@ HCSR04_TRIG = board.GP20   # fysieke pin 26
 HCSR04_ECHO = board.GP21   # fysieke pin 27
 
 
-RESERVOIR_LEEG_CM = 7.0
+RESERVOIR_LEEG_CM = 13.0
 RESERVOIR_VOL_CM = 3.0     
 
 
