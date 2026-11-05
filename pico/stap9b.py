@@ -137,7 +137,7 @@ HCSR04_ECHO = board.GP21   # fysieke pin 27
 
 # Kalibratie reservoir: afstand van de sensor tot het water in cm.
 # Meet ze zelf bij een LEEG en een VOL reservoir en vul ze hier in.
-RESERVOIR_LEEG_CM = 15.0
+RESERVOIR_LEEG_CM = 7.0
 RESERVOIR_VOL_CM = 3.0     # HC-SR04 meet niet betrouwbaar onder ~2 cm
 
 # SPI-pinnen voor de MCP3008 (SPI0 van de Pico).
